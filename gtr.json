@@ -1,0 +1,26 @@
+{
+    "$schema": "https://raw.githubusercontent.com/shibisty/gtr/main/schema/gtr.schema.json",
+    "name": "fullstack-orm",
+    "version": "0.1.0",
+    "description": "orm and migrations for fullstack: database provider, repositories, route model binding, migrate and db:seed commands",
+    "license": "MIT",
+    "repository": "github:shibisty/fullstack.go-orm",
+    "engines": {
+        "go": ">=1.22"
+    },
+    "devDependencies": {
+        "fullstack": "github:shibisty/fullstack.go",
+        "orm": "github:shibisty/orm.go",
+        "migration": "github:shibisty/migration.go",
+        "migration-orm": "github:shibisty/migration.go-orm-driver"
+    },
+    "peerDependencies": {
+        "fullstack": "^0.1",
+        "orm": "^0.2",
+        "migration": "^0.1",
+        "migration-orm": "^0.1"
+    },
+    "scripts": {
+        "test": "go test ./..."
+    }
+}
