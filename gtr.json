@@ -8,17 +8,18 @@
     "engines": {
         "go": ">=1.22"
     },
+    "dependencies": {},
     "devDependencies": {
+        "@migration/orm": "^0.2",
         "fullstack": "^0.1",
-        "orm": "^0.2",
         "migration": "^0.1",
-        "@migration/orm": "^0.2"
+        "orm": "^0.2"
     },
     "peerDependencies": {
+        "@migration/orm": "^0.2",
         "fullstack": "^0.1",
-        "orm": "^0.2",
         "migration": "^0.1",
-        "@migration/orm": "^0.2"
+        "orm": "^0.2"
     },
     "scripts": {
         "test": "go test ./..."
