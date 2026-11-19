@@ -1,4 +1,4 @@
-# fullstack-orm
+# @fullstack/orm
 
 [orm](https://github.com/shibisty/orm.go) and [migration](https://github.com/shibisty/migration.go) for
 [fullstack](https://github.com/shibisty/fullstack.go): the database connection from the configuration,
@@ -9,18 +9,18 @@ repositories and route model binding from the container, and Laravel-style conso
 ```json
 {
     "dependencies": {
-        "fullstack": "github:shibisty/fullstack.go",
-        "fullstack-orm": "github:shibisty/fullstack.go-orm",
-        "orm": "github:shibisty/orm.go",
-        "orm-postgres": "github:shibisty/orm.go-postgres-driver",
-        "migration": "github:shibisty/migration.go",
-        "migration-orm": "github:shibisty/migration.go-orm-driver"
+        "fullstack": "^0.1",
+        "@fullstack/orm": "^0.2",
+        "orm": "^0.2",
+        "@orm/postgres": "^0.2",
+        "migration": "^0.1",
+        "@migration/orm": "^0.2"
     }
 }
 ```
 
 ```go
-import "fullstack-orm" // package database
+import "fullstack/orm" // package database
 ```
 
 ## Setup
@@ -67,7 +67,7 @@ app.Router.Get("/users/{user}", func(c *web.Ctx) error {
 })
 ```
 
-Factories (orm-factory) take the executor: `factory.New(...).CreateMany(ctx, database.Exec(app), 10)`.
+Factories (@orm/factory) take the executor: `factory.New(...).CreateMany(ctx, database.Exec(app), 10)`.
 
 ## Console
 
@@ -89,8 +89,8 @@ go run . db:seed --only Users
 package migrations
 
 import (
-    database "fullstack-orm"
-    ormstore "migration-orm"
+    database "fullstack/orm"
+    ormstore "migration/orm"
 )
 
 var registry database.Migrations

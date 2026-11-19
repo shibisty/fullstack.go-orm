@@ -15,7 +15,7 @@ import (
 	"fullstack"
 	"fullstack/web"
 	"migration"
-	ormstore "migration-orm"
+	ormstore "migration/orm"
 	"orm"
 )
 

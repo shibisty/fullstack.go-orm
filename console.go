@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"fullstack"
-	ormstore "migration-orm"
+	ormstore "migration/orm"
 	"migration/cli"
 )
 

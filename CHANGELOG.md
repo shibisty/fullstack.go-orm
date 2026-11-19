@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+### Changed
+- Renamed from `fullstack-orm` to `@fullstack/orm` (gtr ADR-0012): `gtr add @fullstack/orm`, `import "fullstack/orm"`; published to the gtr registry. Dependencies on fullstack, passport, orm and migration packages are registry ranges instead of `github:` sources.
+
 ### Added
 - `database.Provider`: opens the connection named by `DB_DRIVER` (one of `Provider.Drivers`;
   optional with a single driver) and `DATABASE_DSN`, registers `orm.Connection`,

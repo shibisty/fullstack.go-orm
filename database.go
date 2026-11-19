@@ -1,5 +1,5 @@
 // Package database wires orm and migrations into fullstack (gtr package
-// fullstack-orm): a service provider that opens the connection named by
+// fullstack/orm): a service provider that opens the connection named by
 // DB_DRIVER and DATABASE_DSN, repositories and route model binding from the
 // container, and the console commands migrate, migrate:rollback,
 // migrate:status, migrate:reset, migrate:refresh, make:migration and db:seed.
@@ -31,7 +31,7 @@ import (
 	"fullstack"
 	"fullstack/env"
 	"fullstack/web"
-	ormstore "migration-orm"
+	ormstore "migration/orm"
 	"orm"
 )
 
@@ -72,7 +72,7 @@ type Provider struct {
 	MigrationsDir string
 	// Seeders run by db:seed, in order.
 	Seeders []Seeder
-	// Migrator replaces the default migrator (migration-orm on the SQL
+	// Migrator replaces the default migrator (migration/orm on the SQL
 	// connection), e.g. with a memory store in tests.
 	Migrator func(ctx context.Context, app *fullstack.App) (*ormstore.Migrator, error)
 
